@@ -127,5 +127,5 @@ npm run deploy
 
 ## Live Demo
 
-View the live portfolio: [GitHub Pages URL]
-Gdrive Link Video:
+View the live portfolio: [https://jocelyn326.github.io/personal-portfolio/]
+Gdrive Link Video:[https://drive.google.com/drive/folders/1aQfjSitAAliwe-fMx90HMRMjP2fIkeHc?usp=sharing]
