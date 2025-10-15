@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Facebook, Github, Mail, Linkedin } from 'lucide-react';
+import { Facebook, Github, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('top');
@@ -95,82 +95,145 @@ function App() {
         </section>
 
         <section id="about">
-          <div className="container">
-            <div className="about-content">
-              <div className="about-text">
-                <p className="section-label">ABOUT ME</p>
-                <header>
-                  <h2>Who Am I?</h2>
-                </header>
-                <p className="about-intro">
-                  <strong>Hi I'm Jocelyn Bendoy</strong>, a dedicated student pursuing Associate in Computer Technology (ACT2) 
-                  at La Verdad Christian College, with aspirations to become a skilled Business Analyst. 
-                  My journey in Information Systems has equipped me with a strong foundation in data analysis, 
-                  project management, and business process improvement.
-                </p>
-                <p className="about-intro">
-                  At 24 years old from Cabuyao, Laguna, I am passionate about bridging the gap between 
-                  technology and business needs. Through my studies and projects, I continuously develop 
-                  my analytical abilities and technical skills to prepare for a career where I can help 
-                  organizations make data-driven decisions and optimize their processes.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="container">
+                              <header>
+                              <h2 className="section-label">ABOUT ME</h2>
+                              </header>
+                              <div className="about-content">
+                                <div className="about-image">
+                                  <img src="pic.jpg" alt="Jocelyn Bendoy" />
+                                </div>
+                                <div className="about-text">
+                                  <p className="about-intro">
+                                    <strong>Hi, I'm Jocelyn Bendoy</strong>, a BS in Information Systems student at La Verdad Christian College.
+                                  </p>
+                                  <ul className="about-list">
+                                    <li>I'm passionate about learning how technology and data can be used to improve business processes.</li>
+                                    <li>I'm currently in my 3rd year of studying Information Systems, and I'm still exploring the path to becoming a Business Analyst.</li>
+                                    <li>I may just be starting, but I'm eager to learn more about data analysis, system design, and how businesses can use technology to make better decisions.</li>
+                                  </ul>
+                                </div>
+                              </div>
+        </div>
         </section>
-
         <section id="projects">
           <div className="container">
             <header>
-              <h2>Projects</h2>
+              <h2 className="section-label">MY PROJECTS</h2>
             </header>
-            <p>
-              Here are some of my recent works showcasing my skills in system development,
-              project planning, and front-end design using tools like React and Laravel.
-            </p>
+            <div className="projects-content">
+              
+              {/* First Project - HCI Website Enhancement */}
+              <a 
+                href="https://www.figma.com/proto/lUQd9vGi7KnXGZ3LB84l9x/Untitled?node-id=48-2946&t=ubbr0CfgURHvT7oo-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=48%3A2946&show-proto-sidebar=1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <div className="project-card">
+                  <div className="project-image-wrapper">
+                    <img src="capcake.png" alt="HCI Website Enhancement Project" />
+                  </div>
+                  <div className="project-info">
+                    <h3>HCI Website Enhancement</h3>
+                    <p className="project-description">A comprehensive redesign focused on improving user experience and interface aesthetics for a cupcake business website.</p>
+                    <span className="project-cta">View Prototype →</span>
+                  </div>
+                </div>
+              </a>
 
-            <div className="row">
-              <div className="col-4">
-                <article className="item">
-                  <a href="#" className="image fit">
-                    <img src="https://via.placeholder.com/400x250/f7fafc/4a5568?text=Attendance+System" alt="Attendance System" />
-                  </a>
-                  <header>
-                    <h3>Classroom Monitoring and Attendance System</h3>
-                  </header>
-                </article>
-              </div>
+              {/* Second Project - AKBAY */}
+              <a 
+                href="https://www.figma.com/proto/85xKBo4X1zavnNBwLg1DSq/AKBAY?node-id=38-15&t=HPTPze9Qgy5sGuig-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=38%3A15&show-proto-sidebar=1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <div className="project-card">
+                  <div className="project-image-wrapper">
+                    <img src="akbay.png" alt="AKBAY Project" />
+                  </div>
+                  <div className="project-info">
+                    <h3>AKBAY</h3>
+                    <p className="project-description">An innovative mobile application design focused on providing accessible and user-friendly solutions.</p>
+                    <span className="project-cta">View Prototype →</span>
+                  </div>
+                </div>
+              </a>
 
-              <div className="col-4">
-                <article className="item">
-                  <a href="#" className="image fit">
-                    <img src="https://via.placeholder.com/400x250/f7fafc/4a5568?text=Portfolio+Website" alt="Portfolio" />
-                  </a>
-                  <header>
-                    <h3>Personal Portfolio Website</h3>
-                  </header>
-                </article>
-              </div>
             </div>
           </div>
         </section>
-
         <section id="skills">
           <div className="container">
             <header>
-              <h2>Skills</h2>
+              <h2 className="section-label">MY SKILLS</h2>
             </header>
-            <p>
+            <p className="skills-description">
               I am continuously improving my technical and analytical abilities. 
               Below are some of the key skills I've gained so far:
             </p>
-            <ul>
-              <li>Front-End Development (React, HTML, CSS, JavaScript)</li>
-              <li>Back-End Development (Laravel, PHP, MySQL)</li>
-              <li>Data Analysis & Visualization</li>
-              <li>Project Documentation (URS, SRS, UML Diagrams)</li>
-              <li>Business Process Analysis</li>
-            </ul>
+            <div className="skills-grid">
+              <div className="skill-item">
+                <div className="skill-header">
+                  <span className="skill-name">React</span>
+                  <span className="skill-percentage">40%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{width: '40%', backgroundColor: '#61DAFB'}}></div>
+                </div>
+              </div>
+
+              <div className="skill-item">
+                <div className="skill-header">
+                  <span className="skill-name">JavaScript</span>
+                  <span className="skill-percentage">35%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{width: '35%', backgroundColor: '#F7DF1E'}}></div>
+                </div>
+              </div>
+
+              <div className="skill-item">
+                <div className="skill-header">
+                  <span className="skill-name">HTML</span>
+                  <span className="skill-percentage">45%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{width: '45%', backgroundColor: '#E34F26'}}></div>
+                </div>
+              </div>
+
+              <div className="skill-item">
+                <div className="skill-header">
+                  <span className="skill-name">CSS</span>
+                  <span className="skill-percentage">42%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{width: '42%', backgroundColor: '#1572B6'}}></div>
+                </div>
+              </div>
+
+              <div className="skill-item">
+                <div className="skill-header">
+                  <span className="skill-name">PHP</span>
+                  <span className="skill-percentage">30%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{width: '30%', backgroundColor: '#777BB4'}}></div>
+                </div>
+              </div>
+
+              <div className="skill-item">
+                <div className="skill-header">
+                  <span className="skill-name">MySQL</span>
+                  <span className="skill-percentage">38%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{width: '38%', backgroundColor: '#4479A1'}}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -239,37 +302,114 @@ function App() {
           </div>
         </section>
 
-        <section id="contact">
-          <div className="container">
-            <header>
-              <h2>Contact</h2>
-            </header>
-            <p>Connect with me through my social media accounts below:</p>
+        <section className="min-h-screen flex items-center justify-center bg-gray-50 py-20 px-6">
+              <div className="max-w-2xl w-full">
+                {/* Header */}
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl font-light tracking-widest text-gray-900 mb-4">
+                    CONTACT
+                  </h2>
+                  <div className="w-16 h-px bg-gray-900 mx-auto"></div>
+                </div>
 
-            <ul className="icons">
-              <li>
-                <a href="https://www.facebook.com/share/19dnj9VNSV/" target="_blank" rel="noopener noreferrer" title="Facebook">
-                  <Facebook size={20} />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/Jocelyn326" target="_blank" rel="noopener noreferrer" title="GitHub">
-                  <Github size={20} />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:jocelynbendoy@gmail.com" title="Email">
-                  <Mail size={20} />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/jocelyn-bendoy-316a2a302/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                  <Linkedin size={20} />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
+                {/* Contact Info */}
+                <div className="space-y-8 mb-16">
+                  {/* Address */}
+                  <div className="flex items-start gap-4">
+                    <MapPin size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
+                    <div>
+                      <h3 className="text-base font-semibold text-gray-900 mb-1">
+                        Address
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        Apalit, Pampanga
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div className="flex items-start gap-4">
+                    <Phone size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
+                    <div>
+                      <h3 className="text-base font-semibold text-gray-900 mb-1">
+                        Phone
+                      </h3>
+                      <a 
+                        href="tel:+639121690996"
+                        className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-300 underline"
+                      >
+                        +63 912 169 0996
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-start gap-4">
+                    <Mail size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
+                    <div>
+                      <h3 className="text-base font-semibold text-gray-900 mb-1">
+                        Email me
+                      </h3>
+                      <a 
+                        href="mailto:jocelynbendoy26@gmail.com"
+                        className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-300 underline break-all"
+                      >
+                        jocelynbendoy26@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-start gap-4">
+                    <MapPin size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
+                    <div>
+                      <h3 className="text-base font-semibold text-gray-900 mb-1">
+                        Location
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        Apalit, Pampanga
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Media */}
+                <div>
+                  <p className="text-sm text-gray-700 mb-4 font-medium">
+                    Connect with me:
+                  </p>
+                  <div className="flex gap-4">
+                    <a 
+                      href="https://www.facebook.com/share/19dnj9VNSV/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                      aria-label="Facebook"
+                    >
+                      <Facebook size={20} strokeWidth={1.5} />
+                    </a>
+                    <a 
+                      href="https://github.com/Jocelyn326" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                      aria-label="GitHub"
+                    >
+                      <Github size={20} strokeWidth={1.5} />
+                    </a>
+                    <a 
+                      href="https://www.linkedin.com/in/jocelyn-bendoy-316a2a302/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin size={20} strokeWidth={1.5} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
       </div>
 
       <div id="footer">
