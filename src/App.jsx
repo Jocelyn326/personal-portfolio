@@ -75,6 +75,7 @@ function App() {
       </div>
 
       <div id="main">
+        {/* Home Section */}
         <section id="top">
           <div className="container">
             <header>
@@ -94,35 +95,37 @@ function App() {
           </div>
         </section>
 
+        {/* About Section */}
         <section id="about">
-        <div className="container">
-                              <header>
-                              <h2 className="section-label">ABOUT ME</h2>
-                              </header>
-                              <div className="about-content">
-                                <div className="about-image">
-                                  <img src="pic.jpg" alt="Jocelyn Bendoy" />
-                                </div>
-                                <div className="about-text">
-                                  <p className="about-intro">
-                                    <strong>Hi, I'm Jocelyn Bendoy</strong>, a BS in Information Systems student at La Verdad Christian College.
-                                  </p>
-                                  <ul className="about-list">
-                                    <li>I'm passionate about learning how technology and data can be used to improve business processes.</li>
-                                    <li>I'm currently in my 3rd year of studying Information Systems, and I'm still exploring the path to becoming a Business Analyst.</li>
-                                    <li>I may just be starting, but I'm eager to learn more about data analysis, system design, and how businesses can use technology to make better decisions.</li>
-                                  </ul>
-                                </div>
-                              </div>
-        </div>
+          <div className="container">
+            <header>
+              <h2 className="section-label">ABOUT ME</h2>
+            </header>
+            <div className="about-content">
+              <div className="about-image">
+                <img src="pic.jpg" alt="Jocelyn Bendoy" />
+              </div>
+              <div className="about-text">
+                <p className="about-intro">
+                  <strong>Hi, I'm Jocelyn Bendoy</strong>, a BS in Information Systems student at La Verdad Christian College.
+                </p>
+                <ul className="about-list">
+                  <li>I'm passionate about learning how technology and data can be used to improve business processes.</li>
+                  <li>I'm currently in my 3rd year of studying Information Systems, and I'm still exploring the path to becoming a Business Analyst.</li>
+                  <li>I may just be starting, but I'm eager to learn more about data analysis, system design, and how businesses can use technology to make better decisions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
+
+        {/* Projects Section */}
         <section id="projects">
           <div className="container">
             <header>
               <h2 className="section-label">MY PROJECTS</h2>
             </header>
-            <div className="projects-content">
-              
+            <div className="projects-grid">
               {/* First Project - HCI Website Enhancement */}
               <a 
                 href="https://www.figma.com/proto/lUQd9vGi7KnXGZ3LB84l9x/Untitled?node-id=48-2946&t=ubbr0CfgURHvT7oo-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=48%3A2946&show-proto-sidebar=1" 
@@ -160,10 +163,11 @@ function App() {
                   </div>
                 </div>
               </a>
-
             </div>
           </div>
         </section>
+
+        {/* Skills Section */}
         <section id="skills">
           <div className="container">
             <header>
@@ -237,10 +241,11 @@ function App() {
           </div>
         </section>
 
+        {/* Resume Section */}
         <section id="resume">
           <div className="container">
             <header>
-              <h2>My Resume</h2>
+              <h2 className="section-label">MY RESUME</h2>
             </header>
             
             <div className="resume-content">
@@ -250,7 +255,7 @@ function App() {
                 <div className="resume-item">
                   <div className="resume-date">📅 2025 - Present</div>
                   <h4>La Verdad Christian College</h4>
-                  <p className="resume-specialty">Bachelor of Science in Information System </p>
+                  <p className="resume-specialty">Bachelor of Science in Information System</p>
                   <p className="resume-location">Apalit, Pampanga</p>
                 </div>
 
@@ -268,7 +273,7 @@ function App() {
                   <p className="resume-location">City of Cabuyao, Laguna</p>
                 </div>
 
-                  <div className="resume-item">
+                <div className="resume-item">
                   <div className="resume-date">📅 2018 - 2019</div>
                   <h4>Southville1 Integrated National Highschool</h4>
                   <p className="resume-location">Brgy. Sala, City of Cabuyao Laguna</p>
@@ -294,124 +299,93 @@ function App() {
               </div>
             </div>
 
-          <footer style={{ textAlign: 'center', marginTop: '40px' }}>
-            <a href="/Resume.png" className="button" download="Resume.png">
-              Download Full Resume 
-            </a>
-          </footer>
+            <footer style={{ textAlign: 'center', marginTop: '40px' }}>
+              <a href="/Resume.png" className="button" download="Resume.png">
+                Download Full Resume
+              </a>
+            </footer>
           </div>
         </section>
 
-        <section className="min-h-screen flex items-center justify-center bg-gray-50 py-20 px-6">
-              <div className="max-w-2xl w-full">
-                {/* Header */}
-                <div className="text-center mb-16">
-                  <h2 className="text-4xl font-light tracking-widest text-gray-900 mb-4">
-                    CONTACT
-                  </h2>
-                  <div className="w-16 h-px bg-gray-900 mx-auto"></div>
-                </div>
+        {/* Contact Section */}
+        <section id="contact">
+          <div className="contact-container">
+            {/* Header */}
+            <div className="contact-header">
+              <h2>CONTACT</h2>
+              <div className="contact-header-line"></div>
+            </div>
 
-                {/* Contact Info */}
-                <div className="space-y-8 mb-16">
-                  {/* Address */}
-                  <div className="flex items-start gap-4">
-                    <MapPin size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <h3 className="text-base font-semibold text-gray-900 mb-1">
-                        Address
-                      </h3>
-                      <p className="text-gray-600 text-sm">
-                        Apalit, Pampanga
-                      </p>
-                    </div>
-                  </div>
+            {/* Social Media - Top */}
+            <div className="contact-social-top">
+              <p>You can connect with me at:</p>
+              <div className="contact-social-grid">
+                <a 
+                  href="https://www.linkedin.com/in/jocelyn-bendoy-316a2a302/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-card"
+                >
+                  <Linkedin size={28} />
+                  <span>LinkedIn</span>
+                </a>
+                <a 
+                  href="https://www.facebook.com/share/19dnj9VNSV/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-card"
+                >
+                  <Facebook size={28} />
+                  <span>Facebook</span>
+                </a>
+                <a 
+                  href="https://github.com/Jocelyn326" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-card"
+                >
+                  <Github size={28} />
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
 
-                  {/* Phone */}
-                  <div className="flex items-start gap-4">
-                    <Phone size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <h3 className="text-base font-semibold text-gray-900 mb-1">
-                        Phone
-                      </h3>
-                      <a 
-                        href="tel:+639121690996"
-                        className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-300 underline"
-                      >
-                        +63 912 169 0996
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Email */}
-                  <div className="flex items-start gap-4">
-                    <Mail size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <h3 className="text-base font-semibold text-gray-900 mb-1">
-                        Email me
-                      </h3>
-                      <a 
-                        href="mailto:jocelynbendoy26@gmail.com"
-                        className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-300 underline break-all"
-                      >
-                        jocelynbendoy26@gmail.com
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Location */}
-                  <div className="flex items-start gap-4">
-                    <MapPin size={20} className="text-gray-500 mt-1 flex-shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <h3 className="text-base font-semibold text-gray-900 mb-1">
-                        Location
-                      </h3>
-                      <p className="text-gray-600 text-sm">
-                        Apalit, Pampanga
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Social Media */}
-                <div>
-                  <p className="text-sm text-gray-700 mb-4 font-medium">
-                    Connect with me:
-                  </p>
-                  <div className="flex gap-4">
-                    <a 
-                      href="https://www.facebook.com/share/19dnj9VNSV/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
-                      aria-label="Facebook"
-                    >
-                      <Facebook size={20} strokeWidth={1.5} />
-                    </a>
-                    <a 
-                      href="https://github.com/Jocelyn326" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
-                      aria-label="GitHub"
-                    >
-                      <Github size={20} strokeWidth={1.5} />
-                    </a>
-                    <a 
-                      href="https://www.linkedin.com/in/jocelyn-bendoy-316a2a302/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
-                      aria-label="LinkedIn"
-                    >
-                      <Linkedin size={20} strokeWidth={1.5} />
-                    </a>
-                  </div>
+            {/* Contact Info - Bottom */}
+            <div className="contact-info">
+              {/* Address */}
+              <div className="contact-item">
+                <MapPin className="contact-icon" />
+                <div className="contact-item-content">
+                  <h3>Address</h3>
+                  <p>Apalit, Pampanga</p>
                 </div>
               </div>
-            </section>
+
+              {/* Phone */}
+              <div className="contact-item">
+                <Phone className="contact-icon" />
+                <div className="contact-item-content">
+                  <h3>Phone</h3>
+                  <a href="tel:+639121690996">+63 912 169 0996</a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="contact-item">
+                <Mail className="contact-icon" />
+                <div className="contact-item-content">
+                  <h3>Email</h3>
+                  <a href="mailto:jocelynbendoy26@gmail.com">
+                    jocelynbendoy26@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
+      {/* Footer */}
       <div id="footer">
         <ul className="copyright">
           <li>© 2025 Jocelyn Bendoy. All rights reserved.</li>
@@ -423,4 +397,3 @@ function App() {
 }
 
 export default App;
-
